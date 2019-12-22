@@ -10,6 +10,13 @@ services:
       - ./data/coolq-data:/home/user/coolq
     environment:
       VNC_PASSWD: 12345678
-      COOLQ_ACCOUNT: 1278716328
-      CQHTTP_POST_URL: http://host.docker.internal:8080/msg
+      COOLQ_ACCOUNT: 740596752
+      CQHTTP_POST_URL: http://bot:8080/msg
       CQHTTP_SERVE_DATA_FILES: 'yes'
+    external_links:
+      - bot
+    networks:
+      - net
+networks:
+  net:
+    external: true
