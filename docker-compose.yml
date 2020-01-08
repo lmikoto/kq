@@ -10,7 +10,7 @@ services:
       - ./data/coolq-data:/home/user/coolq
     environment:
       VNC_PASSWD: 12345678
-      COOLQ_ACCOUNT: 740596752
+      COOLQ_ACCOUNT: 251963871
       CQHTTP_POST_URL: http://bot:8080/msg
       CQHTTP_SERVE_DATA_FILES: 'yes'
     external_links:
