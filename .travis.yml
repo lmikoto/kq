@@ -6,6 +6,8 @@ branchs:
     - master
 install:
   - echo 1
+scripts:
+  - echo 1
 addons:
   ssh_known_hosts:
     - 47.102.216.171
