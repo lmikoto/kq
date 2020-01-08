@@ -9,10 +9,10 @@ services:
     volumes:
       - ./data/coolq-data:/home/user/coolq
     environment:
-      VNC_PASSWD: toplevel715
-      COOLQ_ACCOUNT: 1824018300
       CQHTTP_POST_URL: http://bot:8080/msg
       CQHTTP_SERVE_DATA_FILES: 'yes'
+    env_file:
+      - .env
     external_links:
       - bot
     networks:
