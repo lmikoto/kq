@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '10'
+branchs:
+  only:
+    - master
+install:
+  - echo 1
+addons:
+  ssh_known_hosts:
+    - 47.102.216.171
+before_install:
+  - openssl aes-256-cbc -K $encrypted_6efc2f5a1d30_key -iv $encrypted_6efc2f5a1d30_iv -in key.pem.enc -out ~\/.ssh/key.pem -d
+after_success:
+  - ssh root@47.102.216.171 "/root/kq/deploy.sh"
